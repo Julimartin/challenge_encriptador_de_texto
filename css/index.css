@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Palette */
+    --background-color: #F7BFB4;
+    --dark-blue-300: #0A3871;
+    --light-blue-300: #EAD2AC;
+    --light-blue: #DF928E;
+    --grey-500: #C58882;
+    --grey-400: #8C7976;
+
+    /* Typography */
+    --base-font: 'inter', sans-serif;
+
+    /*font-sizes*/
+    --large-32: 2rem;
+    --medium-24: 1.5rem;
+    --small-16: 1.6rem;
+    --xsmall-12: 1.2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: var(--base-font);
+    font-weight: 400;
+}
+
+body {
+    max-height: 100vw;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    display: flex;
+    margin: 2%;
+    gap: 67px;
+    color: var(--dark-blue-300);    
+}
+
+.img_logo {
+    width: 120px;
+    height: 48px;
+}
+
+.main__inputs, .main__response {
+    display: flex;
+    flex-direction: column;
+    
+    margin-bottom: 20px;
+}
+
+.main__inputs {
+    gap: 16px;
+    padding-bottom: 32px;
+}
+
+.input__text {
+    background-color: transparent;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    color: var(--dark-blue-300);
+    font-size: var(--large-32);
+    padding: 15% 2%;
+}
+
+.input__text::placeholder {
+    color: var(--dark-blue-300);
+}
+
+.input__instruction {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--xsmall-12);
+    color: var(--grey-400);
+    padding: 0 2%;
+}
+
+.input__button {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.boton {
+    width: 328px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: var(--xsmall-12);
+    padding: 24px;
+    box-shadow: 0px 17px 8px -10px rgba(52,58,64,1);
+}
+
+.boton:hover {
+    background-color: #0a9673; /* Cambia el color de fondo */
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+}
+
+#btn_encriptar {
+    background-color: var(--dark-blue-300);
+    color:white;
+}
+
+#btn_desencriptar, #btn_copiar {
+    background-color: var(--light-blue);
+    color:var(--dark-blue-300);
+    border: 1px solid var(--dark-blue-300);
+}
+
+.main__response {
+    min-width: 350px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 32px;
+    text-align: center;
+    background-color: white;
+    border-radius: 32px;
+    gap: 32px;
+    box-shadow: 0px 17px 30px -7px rgba(0,0,0,0.73);
+    margin-right: 2%;
+}
+
+.img-respuesta {
+    max-width: 100%;
+    height: auto;
+}
+
+.input__result {
+    width: 100%;
+    max-height: 480px;
+    overflow-y: auto;
+    color: var(--grey-400);
+    font-size: var(--medium-24);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+h2 {
+    font-size: var(--medium-24);
+    font-weight: 700;
+    color: var(--grey-500);
+}
+
+.instruccion {
+    font-size: var(--small-16);
+    color: var(--grey-400);
+}
+
+footer {
+    color: white;
+    background-color: var(--dark-blue-300);
+    text-align: center;
+    padding: 24px 0;
+}
+
+.boton.oculto {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.boton:not(.oculto) {
+    opacity: 1;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.oculto {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .main__response {
+        width: 80%;
+        padding: 5%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    
+    .container {
+        justify-content: center;
+    }
+
+    .input__text {
+        margin-right: 20px;
+    }
+
+    .input__button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__response {
+        max-width: 688px;
+        
+    }
+}

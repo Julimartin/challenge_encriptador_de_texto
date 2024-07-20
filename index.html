@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <a href="https://app.aluracursos.com/" target="_blank"><img class="img_logo" src="./assets/Logo@2x.png" alt="logo de Alura"></a>
+        </header>
+        <section class="main__inputs">
+            <textarea class="input__text" id="texto" placeholder="Ingrese el texto aquí" none></textarea>
+            <p class="input__instruction"><iconify-icon icon="zondicons:exclamation-solid" height="16px"></iconify-icon>Sólo letras minúsculas y sin acentos</p>
+            <div class="input__button">
+                <button class="boton" id="btn_encriptar">Encriptar</button>
+                <button class="boton" id="btn_desencriptar">Desencriptar</button>
+            </div>  
+        </section>
+        <section class="main__response">
+            <img class="img-respuesta" id="img-respuesta" src="./assets/Muñeco.png" alt="Figura de persona mirando con una lupa un diamante">
+            <h2 id="frase">Ningún mensaje fue encontrado</h2>
+            <p class="instrucción" id="instrucción">Ingresa un texto que desees encriptar o desencriptar</p>
+            <p class="input__result" id="textoResultado"></p>
+            <button class="boton oculto" id="btn_copiar">Copiar</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por Julieta Martin - 2024</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
