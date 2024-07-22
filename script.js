@@ -2,6 +2,7 @@ const botonEncriptar = document.getElementById("btn_encriptar");
 const botonDesencriptar = document.getElementById("btn_desencriptar");
 const botonCopiar = document.getElementById('btn_copiar');
 
+
 function traducirTexto(textoEncriptado, reglas) {
     for (let item in reglas) {
         if (reglas.hasOwnProperty(item)) {
@@ -45,9 +46,16 @@ function ocultarElementos() {
 function mostrarTexto(funcion) {
     ocultarElementos();
     const texto = document.getElementById("texto").value;
-    const textoEncriptado = funcion(texto);
-    document.getElementById('textoResultado').textContent = textoEncriptado;
+    const textoResultado = funcion(texto);
+    const textoResultadoElement = document.getElementById('textoResultado');
     
+    
+    // Reiniciar la animación
+    textoResultadoElement.classList.remove('fadeIn');
+    void textoResultadoElement.offsetWidth; // Forzar reflujo
+    textoResultadoElement.classList.add('fadeIn');
+
+    textoResultadoElement.textContent = textoResultado;
 
     // Mostrar el botón de copiar si hay un resultado
     if (textoResultado) {
