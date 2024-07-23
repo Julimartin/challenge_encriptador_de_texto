@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Hairline&family=Bungee+Spice&display=swap');
 
 :root {
     /* Palette */
-    --background-color: #F7BFB4;
+    --background-color: linear-gradient(0.25turn, #843bad, #ebf8e1, #f69d3c);
     --dark-blue-300: #0A3871;
-    --light-blue-300: #EAD2AC;
-    --light-blue: #7c57a8;
-    --grey-500: #7c57a8;
+    --lavanda: #9ab2fd; 
+    --violet: #7c57a8;
     --grey-400: #8C7976;
 
     /* Typography */
-    --base-font: 'inter', sans-serif;
+    --base-font: "Bungee", sans-serif;
 
     /*font-sizes*/
     --large-32: 2rem;
@@ -31,7 +30,7 @@
 body {
     max-height: 100vw;
     box-sizing: border-box;
-    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    background: var(--background-color);
 }
 
 .container {
@@ -95,7 +94,7 @@ body {
     font-size: var(--xsmall-12);
     padding: 24px;
     box-shadow: 0 15px 16px rgba(0, 0, 0, 0.2);
-    background: radial-gradient(#9ab2fd, #7c57a8 );
+    background: radial-gradient(var(--lavanda), var(--violet));
 }
 
 .boton:active {
@@ -104,7 +103,7 @@ body {
 }
 
 .boton:hover {
-    background: radial-gradient( #7c57a8, #9ab2fd );
+    background: radial-gradient(var(--violet), var(--lavanda));
     transform: scale(1.05);
 }
 
@@ -114,13 +113,11 @@ body {
 }
 
 #btn_desencriptar, #btn_copiar {
-    background-color: var(--light-blue);
     color: var(--dark-blue-300);
-    
 }
 
 .main__response {
-    min-width: 350px;
+    max-width: 400px;
     justify-content: center;
     align-items: center;
     padding: 0 32px;
@@ -153,7 +150,7 @@ body {
 h2 {
     font-size: var(--medium-24);
     font-weight: 700;
-    color: var(--grey-500);
+    color: var(--violet);
 }
 
 .instruccion {
