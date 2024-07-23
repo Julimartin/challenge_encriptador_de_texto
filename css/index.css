@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Hairline&family=Bungee+Spice&display=swap');
+
 
 :root {
     /* Palette */
-    --background-color: #F7BFB4;
+    --background-color: linear-gradient(0.25turn, #6e339e, #ebf8e1, #f69d3c);
     --dark-blue-300: #0A3871;
     --light-blue-300: #EAD2AC;
     --light-blue: #7c57a8;
@@ -10,7 +11,8 @@
     --grey-400: #8C7976;
 
     /* Typography */
-    --base-font: 'inter', sans-serif;
+    --base-font: "Bungee", sans-serif;
+    --second-font: "Bungee Hairline", sans-serif;
 
     /*font-sizes*/
     --large-32: 2rem;
@@ -31,7 +33,7 @@
 body {
     max-height: 100vw;
     box-sizing: border-box;
-    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    background: var(--background-color);
 }
 
 .container {
@@ -143,6 +145,7 @@ body {
 
 .input__result {
     width: 100%;
+    max-width: 400px;
     max-height: 480px;
     overflow-y: auto;
     color: var(--grey-400);
