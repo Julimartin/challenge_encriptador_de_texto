@@ -52,6 +52,7 @@ body {
 }
 
 .main__inputs {
+    max-width: 600px;
     gap: 16px;
     padding-bottom: 32px;
 }
@@ -116,7 +117,7 @@ body {
 }
 
 .main__response {
-    max-width: 400px;
+    max-width: 350px;
     justify-content: center;
     align-items: center;
     padding: 0 32px;
