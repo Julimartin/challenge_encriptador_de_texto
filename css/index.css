@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Hairline&family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Hairline&family=Bungee+Spice&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     /* Palette */
@@ -10,6 +10,7 @@
 
     /* Typography */
     --base-font: "Bungee", sans-serif;
+    --alternative-font: "Raleway", sans-serif;
 
     /*font-sizes*/
     --large-32: 2rem;
@@ -55,6 +56,11 @@ body {
     max-width: 600px;
     gap: 16px;
     padding-bottom: 32px;
+}
+
+.input__text, .input__instruction, .main__response-result, .main__response-instruction {
+    font-family: var(--alternative-font);
+    font-weight: 700;
 }
 
 .input__text {
@@ -124,21 +130,21 @@ body {
     text-align: center;
     background-color: white;
     border-radius: 32px;
-    gap: 32px;
     box-shadow: 0px 17px 30px -7px rgba(0,0,0,0.73);
-    
+    gap: 16px;
 }
 
-.img-respuesta {
+.main__response-img {
     max-width: 100%;
     height: auto;
+    margin-bottom: 32px;
 }
 
-.img-respuesta:hover {
+.main__response-img:hover {
     transform: rotate(10deg);
 }
 
-.input__result {
+.main__response-result {
     width: 100%;
     max-height: 480px;
     overflow-y: auto;
@@ -211,6 +217,12 @@ footer {
         margin: 4%;
     }
 
+    .main__inputs {
+        max-width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
     .input__text {
         margin: 24px 0;
         max-width: 100%;
@@ -226,7 +238,7 @@ footer {
         padding: 32px 0;
     }
 
-    .img-respuesta {
+    .main__response-img {
         display: none;
     }
     
@@ -244,7 +256,7 @@ footer {
     
     .container {
         justify-content: center;
-        gap: 15px;
+        gap: 64px;
     }
 
     .input__text {

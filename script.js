@@ -4,9 +4,9 @@ const botonDesencriptar = document.getElementById("btn_desencriptar");
 const botonCopiar = document.getElementById('btn_copiar');
 const textoInput = document.getElementById("texto");
 const textoResultadoElement = document.getElementById('textoResultado');
-const imgRespuesta = document.getElementById('img-respuesta');
-const instruccion = document.getElementById('instrucción');
-const frase = document.getElementById('frase');
+const imgRespuesta = document.getElementById('main__response-img');
+const instruccion = document.getElementById('main__response-instruction');
+const no_message = document.getElementById('main__response-no-message');
 
 
 const reglasEncriptar = {
@@ -49,14 +49,17 @@ function validarTexto(texto) {
 function ocultarElementos() {
     imgRespuesta.classList.add('oculto');
     instruccion.classList.add('oculto');
-    frase.classList.add('oculto');
+    no_message.classList.add('oculto');
 }
 
 
 function mostrarTexto(funcion) {
     const texto = textoInput.value;
 
-    if (!validarTexto(texto)) {
+    if (!texto) {
+        alert("El campo de texto está vacío. Por favor, ingresa un texto.");
+    }
+    else if (!validarTexto(texto)) {
         alert("Solo letras minúsculas sin acentos ni caracteres especiales.");
     } else {
         ocultarElementos();
