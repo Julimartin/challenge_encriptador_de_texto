@@ -79,6 +79,16 @@ function mostrarTexto(funcion) {
     }
 }
 
+function resetearMainResponse() {
+    if (textoInput.value.trim() === "") {
+        // Restablece el contenido a su estado original
+        imgRespuesta.classList.remove('oculto');
+        instruccion.classList.remove('oculto');
+        no_message.classList.remove('oculto');
+        textoResultadoElement.textContent = "";
+        botonCopiar.classList.add('oculto');
+    }
+}
 
 function copiarTexto() {
     const textoResultado = textoResultadoElement.textContent;
@@ -91,3 +101,4 @@ function copiarTexto() {
 botonEncriptar.addEventListener('click', () => mostrarTexto(encriptar));
 botonDesencriptar.addEventListener('click', () => mostrarTexto(desencriptar));
 botonCopiar.addEventListener('click', copiarTexto);
+textoInput.addEventListener('input', resetearMainResponse);
